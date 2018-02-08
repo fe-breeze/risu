@@ -5,6 +5,7 @@ var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 const imagemin = require('gulp-imagemin');
 var del = require('del');
+var minifycss = require('gulp-minify-css'); //压缩css文件,并给引用url添加版本号避免缓存
 
 gulp.task('html', function () {
   var options = {
@@ -28,6 +29,7 @@ gulp.task('css', function () {
   ];
   return gulp.src('./css/*.css')
     .pipe(postcss(plugins))
+    .pipe(minifycss())
     .pipe(gulp.dest('./dist/css'));
 });
 gulp.task('js', function () {
