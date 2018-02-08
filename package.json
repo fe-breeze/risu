@@ -1,23 +1,23 @@
 {
-  "name": "risu",
+  "name": "parcel-demo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel ./src/index.html",
+    "build": "rm -rf .cache dist && parcel build ./src/index.html --public-url ./"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "animate.css": "^3.6.1",
     "autoprefixer": "^7.2.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-runtime": "^6.26.0",
     "bootstrap": "^3.3.7",
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-htmlmin": "^4.0.0",
-    "gulp-imagemin": "^4.1.0",
-    "gulp-minify-css": "^1.2.4",
-    "gulp-postcss": "^7.0.1",
-    "gulp-uglify": "^3.0.0",
-    "jquery": "^3.3.1"
+    "jquery": "^3.3.1",
+    "posthtml-img-autosize": "^0.1.1"
   }
 }
