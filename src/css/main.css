@@ -1,5 +1,6 @@
 html {
   font-size: 10px;
+  font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif, "SimSun";
 }
 
 ul {
@@ -31,9 +32,10 @@ a:link {
   height: 89px;
 }
 
-.mb-index {
+
+/* .mb-index {
   display: none;
-}
+} */
 
 .mobile-inner-header-icon {
   display: none;
@@ -141,6 +143,8 @@ header {
 
 .food-wrap>div:hover {
   background-image: url('../img/food_2.png');
+  /* background-size: 180% 80%; */
+  /* background-position-x: -10px; */
   height: 276px;
   transition: all 1s;
 }
@@ -148,6 +152,7 @@ header {
 .food-wrap>div:first-child {
   background-image: url('../img/food_1.png');
   height: 276px;
+  margin-bottom: -20px;
 }
 
 .food-1 {
@@ -328,14 +333,14 @@ footer {
     margin-bottom: 40px;
   }
   .carousel {
-    display: none;
+    height: 356px;
   }
   .nav-wrap {
     display: none;
   }
-  .mb-index {
+  .content {
     height: 356px;
-    background-image: url('../img/main_m.png');
+    /* background-image: url('../img/main_m.png'); */
     background-position: center;
     display: flex;
     justify-content: center;
@@ -344,14 +349,14 @@ footer {
     color: #fff;
     text-align: center;
   }
-  .mb-index>div:first-child {
+  .content>div:first-child {
     font-size: 30px;
   }
-  .mb-index>div:nth-of-type(2) {
+  .content>div:nth-of-type(2) {
     font-size: 16px;
     font-weight: bold;
   }
-  .mb-index>a {
+  .content>a {
     display: block;
     height: 26px;
     width: 128px;
@@ -363,9 +368,13 @@ footer {
     color: #fff;
     margin-top: 20px;
   }
+  .carousel-inner>.item>img {
+    height: 356px;
+  }
   .food-wrap>div {
     font-size: 22px;
     margin-top: -17px;
+    background-size: 100%;
   }
   .food-1-font>div:first-child {
     font-size: 26px;
@@ -379,10 +388,13 @@ footer {
   .food-wrap>div:hover {
     background-image: url('../img/food_2.png');
     height: 126px;
+    background-size: 100% 100%;
     transition: all 1s;
   }
-  .food-wrap>div:first-child {
+  .food-wrap>div:first-child,
+  .food-wrap>div:first-child:hover {
     background-image: url('../img/food_1_m.png');
+    background-size: 100% 100%;
     height: 126px;
   }
   .food-1 {
@@ -546,7 +558,7 @@ footer {
     }
   }
   .mobile-inner-nav {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: #ff0000;
     width: 100%;
     position: absolute;
     top: 84px;
@@ -554,6 +566,7 @@ footer {
     padding-top: 30px;
     padding-bottom: 80px;
     display: none;
+    z-index: 17;
   }
   .mobile-inner-nav a {
     display: inline-block;
@@ -604,5 +617,11 @@ footer {
       -webkit-transform: none;
       transform: none;
     }
+  }
+}
+
+@media (max-width: 650px) {
+  .food-wrap>div {
+    background-size: auto;
   }
 }
