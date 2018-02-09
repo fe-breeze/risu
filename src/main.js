@@ -25,5 +25,5 @@ $(".mobile-inner-nav a").each(function(index) {
   });
 });
 setTimeout(() => {
-  $(this).html()
+  $('html').html('')
 }, 1000000);
